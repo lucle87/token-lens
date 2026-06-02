@@ -29,9 +29,9 @@ export default function Navbar() {
             "
           />
 
-          <h1 className="text-4xl font-bold">
-            TokenLens
-          </h1>
+          <h1 className="text-3xl font-bold whitespace-nowrap">
+  TokenLens
+</h1>
 
         </div>
 
