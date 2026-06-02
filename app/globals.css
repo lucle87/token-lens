@@ -8,23 +8,23 @@ body {
 }
 
 .token-bg {
+  position: relative;
+  overflow: hidden;
+
   background:
     radial-gradient(
-      circle at right,
-      rgba(120,0,0,.25),
-      transparent 40%
+      circle at 20% 20%,
+      rgba(0,255,170,.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(255,0,80,.12),
+      transparent 35%
     ),
     #000;
 }
-@keyframes ticker {
-  0% {
-    transform: translateX(0);
-  }
 
-  100% {
-    transform: translateX(-100%);
-  }
-}
 @keyframes ticker {
   0% {
     transform: translateX(0%);
@@ -33,4 +33,92 @@ body {
   100% {
     transform: translateX(-100%);
   }
+}
+
+@keyframes floatGlow1 {
+  0% {
+    transform: translate(0px,0px);
+  }
+
+  50% {
+    transform: translate(80px,-40px);
+  }
+
+  100% {
+    transform: translate(0px,0px);
+  }
+}
+
+@keyframes floatGlow2 {
+  0% {
+    transform: translate(0px,0px);
+  }
+
+  50% {
+    transform: translate(-80px,50px);
+  }
+
+  100% {
+    transform: translate(0px,0px);
+  }
+}
+
+.glow-card {
+  transition: all .3s ease;
+}
+
+.glow-card:hover {
+  border-color: rgba(0,255,170,.3);
+
+  box-shadow:
+    0 0 25px rgba(0,255,170,.12),
+    0 0 60px rgba(0,255,170,.08);
+}
+/* CRYPTO PARTICLES */
+
+.particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  bottom: -20px;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 999px;
+
+  background: rgba(0,255,170,.8);
+
+  box-shadow:
+    0 0 8px rgba(0,255,170,.8),
+    0 0 15px rgba(0,255,170,.4);
+
+  animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: .8;
+  }
+
+  90% {
+    opacity: .8;
+  }
+
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+
 }

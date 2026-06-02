@@ -8,6 +8,7 @@ import Distribution from "../components/Distribution";
 import Security from "../components/Security";
 import TokenDetails from "../components/TokenDetails";
 import Ticker from "../components/Ticker";
+import Particles from "../components/Particles";
 
 export default function Home() {
 
@@ -37,6 +38,8 @@ export default function Home() {
   return (
 
     <main className="token-bg min-h-screen text-white">
+
+      <Particles />
 
       <Ticker />
 
@@ -78,24 +81,35 @@ export default function Home() {
 
             </div>
 
-            <div className="flex gap-10 mt-16">
+            <div className="grid grid-cols-4 gap-4 mt-16">
 
-              <div>
-                <h2 className="text-5xl font-bold">20+</h2>
-                <p className="text-zinc-500">Risk Checks</p>
-              </div>
+  <div className="bg-zinc-950 border border-zinc-900 rounded-3xl p-5">
+    <p className="text-zinc-500 text-sm">Tokens</p>
+    <h2 className="text-3xl font-bold mt-2">12,543</h2>
+  </div>
 
-              <div>
-                <h2 className="text-5xl font-bold">Instant</h2>
-                <p className="text-zinc-500">Analysis</p>
-              </div>
+  <div className="bg-zinc-950 border border-zinc-900 rounded-3xl p-5">
+    <p className="text-zinc-500 text-sm">Safe</p>
+    <h2 className="text-3xl font-bold text-green-400 mt-2">
+      8,214
+    </h2>
+  </div>
 
-              <div>
-                <h2 className="text-5xl font-bold">Real-Time</h2>
-                <p className="text-zinc-500">Updates</p>
-              </div>
+  <div className="bg-zinc-950 border border-zinc-900 rounded-3xl p-5">
+    <p className="text-zinc-500 text-sm">Risky</p>
+    <h2 className="text-3xl font-bold text-red-400 mt-2">
+      1,632
+    </h2>
+  </div>
 
-            </div>
+  <div className="bg-zinc-950 border border-zinc-900 rounded-3xl p-5">
+    <p className="text-zinc-500 text-sm">New Today</p>
+    <h2 className="text-3xl font-bold text-cyan-400 mt-2">
+      87
+    </h2>
+  </div>
+
+</div>
 
           </div>
 
