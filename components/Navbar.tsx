@@ -21,8 +21,8 @@ export default function Navbar() {
           <Image
             src="/tokenlens-logo.png"
             alt="TokenLens"
-            width={60}
-            height={60}
+            width={40}
+            height={40}
             className="
               rounded-full
               shadow-[0_0_25px_rgba(0,170,255,0.5)]
